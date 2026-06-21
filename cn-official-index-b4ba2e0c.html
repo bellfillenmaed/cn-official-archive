@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>雨燕直播 · 使用引导与信息页</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #f9f7f2;
+      font-family: 'Segoe UI', 'PingFang SC', Roboto, 'Helvetica Neue', sans-serif;
+      color: #2c3e3c;
+      line-height: 1.7;
+      padding: 2rem 1.2rem;
+    }
+
+    .page-wrap {
+      max-width: 880px;
+      margin: 0 auto;
+      background: #fffcf8;
+      border-radius: 28px;
+      box-shadow: 0 8px 28px rgba(0, 0, 0, 0.04);
+      padding: 2.8rem 2.2rem;
+    }
+
+    @media (max-width: 600px) {
+      .page-wrap {
+        padding: 1.8rem 1.2rem;
+      }
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      font-weight: 500;
+      letter-spacing: 1px;
+      color: #3a5a4e;
+      border-left: 6px solid #b4c9bc;
+      padding-left: 1.2rem;
+      margin-bottom: 1.6rem;
+    }
+
+    h2 {
+      font-size: 1.4rem;
+      font-weight: 500;
+      color: #3f5f53;
+      margin: 2rem 0 1rem 0;
+      border-bottom: 1px dashed #d8d2c0;
+      padding-bottom: 0.4rem;
+    }
+
+    h3 {
+      font-size: 1.15rem;
+      font-weight: 500;
+      color: #4b6b5e;
+      margin: 1.5rem 0 0.5rem 0;
+    }
+
+    p {
+      margin-bottom: 1.1rem;
+    }
+
+    a {
+      color: #2b6b5c;
+      text-decoration: none;
+      border-bottom: 1px solid #bccfc6;
+      transition: border-color 0.2s, color 0.2s;
+    }
+
+    a:hover {
+      color: #1b4c3f;
+      border-bottom-color: #1b4c3f;
+    }
+
+    .hero-tagline {
+      font-size: 1.05rem;
+      background: #f2eee6;
+      padding: 1.2rem 1.6rem;
+      border-radius: 20px;
+      margin: 1rem 0 1.8rem 0;
+      color: #3b584b;
+      box-shadow: inset 0 1px 3px rgba(0,0,0,0.02);
+    }
+
+    .callout-box {
+      background: #f4efe9;
+      border-left: 6px solid #9eb7a8;
+      padding: 1.3rem 1.6rem;
+      border-radius: 12px;
+      margin: 1.8rem 0;
+      font-size: 0.98rem;
+    }
+
+    .callout-box strong {
+      color: #3a5a4e;
+    }
+
+    .info-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem 1.6rem;
+      background: #fcf9f4;
+      padding: 1.4rem 1.6rem;
+      border-radius: 18px;
+      margin: 1.5rem 0;
+      border: 1px solid #e4ddd1;
+    }
+
+    .info-item {
+      flex: 1 1 180px;
+    }
+
+    .info-item span {
+      display: block;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: #8a7f6e;
+      margin-bottom: 0.2rem;
+    }
+
+    .info-item p {
+      margin-bottom: 0;
+      font-weight: 450;
+      color: #2c3e3c;
+    }
+
+    .faq-preview {
+      background: #faf6f0;
+      padding: 1.2rem 1.6rem;
+      border-radius: 20px;
+      margin-top: 2rem;
+    }
+
+    .faq-q {
+      font-weight: 500;
+      margin-top: 1rem;
+      color: #3b5a4d;
+    }
+    .faq-q:first-of-type {
+      margin-top: 0.5rem;
+    }
+    .faq-a {
+      padding-left: 0.8rem;
+      margin-bottom: 1rem;
+      border-left: 3px solid #d6cdbb;
+      color: #3f4f48;
+    }
+
+    .note {
+      font-size: 0.9rem;
+      color: #6c6a62;
+      background: #efebe3;
+      padding: 0.6rem 1rem;
+      border-radius: 30px;
+      display: inline-block;
+      margin: 0.4rem 0 1rem 0;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid #e3dbce;
+      margin: 2rem 0 1rem 0;
+    }
+
+    .site-footer {
+      margin-top: 2.8rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #807a6e;
+      border-top: 1px solid #e6dfd1;
+      padding-top: 1.8rem;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    ul li {
+      padding: 0.25rem 0 0.25rem 1.2rem;
+      position: relative;
+    }
+
+    ul li::before {
+      content: "·";
+      position: absolute;
+      left: 0.2rem;
+      color: #95ab9a;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+<div class="page-wrap">
+
+  <h1>雨燕直播 · 站点导航</h1>
+
+  <div class="hero-tagline">
+    这里整理了你需要了解的关于 <a href="https://cn-official-yuyan.com">雨燕直播</a> 的基本信息。无论你是第一次接触，还是希望快速确认平台特点，下面的摘要都能帮你建立清晰的轮廓。
+  </div>
+
+  <p>
+    <a href="https://cn-official-yuyan.com">雨燕直播</a> 是一个以实时内容互动为核心的网络平台，页面设计偏向直观和轻量。用户可以在其中浏览不同主题的直播间，并参与文字交流。网站本身的定位是提供流畅的观看体验以及简洁的界面操作。
+  </p>
+
+  <h2>平台信息速览</h2>
+
+  <div class="info-row">
+    <div class="info-item">
+      <span>性质</span>
+      <p>实时流媒体与互动社区</p>
+    </div>
+    <div class="info-item">
+      <span>语言</span>
+      <p>中文（简体）</p>
+    </div>
+    <div class="info-item">
+      <span>访问方式</span>
+      <p>浏览器直接打开</p>
+    </div>
+    <div class="info-item">
+      <span>主要功能</span>
+      <p>直播间  ·  聊天  ·  内容分类</p>
+    </div>
+  </div>
+
+  <h2>内容分类与场景</h2>
+  <p>
+    根据当前页面结构，<a href="https://cn-official-yuyan.com">雨燕直播</a> 涵盖了多个常见的直播领域。从泛娱乐聊天到才艺展示，再到知识分享与日常记录，平台提供了不同分类入口，方便用户根据兴趣快速定位。对于主播而言，开播流程较为直接；观众则可以通过搜索或推荐列表发现新内容。
+  </p>
+
+  <div class="callout-box">
+    <strong>▎使用提示</strong><br>
+    注册账号后可享受关注、订阅提醒等功能。未登录状态下仍可浏览大部分直播间，但部分互动（如发送弹幕、赠送虚拟道具）需要完成账号绑定。建议使用最新版主流浏览器访问，以保证页面样式与功能完整。
+  </div>
+
+  <h2>常见疑问摘要</h2>
+
+  <div class="faq-preview">
+    <div class="faq-q">Q：雨燕直播是否需要下载软件？</div>
+    <div class="faq-a">不需要。直接通过浏览器访问 <a href="https://cn-official-yuyan.com">雨燕直播</a> 即可，移动端与桌面端均可自适应显示。</div>
+
+    <div class="faq-q">Q：如何找到感兴趣的主播？</div>
+    <div class="faq-a">网站首页设有分类导航和热门推荐区域。你也可以使用页面内的搜索功能，按标签或房间号查找。</div>
+
+    <div class="faq-q">Q：直播间里的聊天记录可以保存吗？</div>
+    <div class="faq-a">聊天内容为实时显示，平台不提供永久聊天记录回放。部分直播可能会录制回放视频，具体视主播设置而定。</div>
+
+    <div class="faq-q">Q：账号安全方面有什么注意事项？</div>
+    <div class="faq-a">建议使用强密码，不要向他人透露验证码。平台官方不会通过私信索取密码或财产信息，遇可疑链接请勿点击。</div>
+  </div>
+
+  <h2>相关信息区</h2>
+  <ul>
+    <li>网站无内置自动跳转广告，页面元素以直播卡片和导航为主。</li>
+    <li>平台提供基础的举报与反馈通道，位于用户菜单内。</li>
+    <li>移动端访问时，界面会调整为纵向布局，方便单手操作。</li>
+    <li>部分直播内容可能包含年龄限制提示，请留意房间标注。</li>
+  </ul>
+
+  <div class="note">
+    📌 本页面仅为介绍与指引，不存储或分发任何视频流。
+  </div>
+
+  <hr>
+
+  <p>
+    若你想亲自体验或进一步了解，可以直接前往 <a href="https://cn-official-yuyan.com">雨燕直播</a>。平台界面和内容会不定期优化，建议定期关注官方公告以获取最新变化。
+  </p>
+
+  <div class="site-footer">
+    整理于 2025 · 仅作信息说明使用
+  </div>
+
+</div>
+</body>
+</html>
